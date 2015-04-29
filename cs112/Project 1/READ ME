@@ -1,0 +1,3 @@
+    At first, I use keyword to store the keyword. And I use kw to store the keyword saparately.
+I use i1 to record the number of movies that match the keyword. I use i2 to record that the number 
+of keywords that the movies match.

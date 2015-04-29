@@ -1,0 +1,12 @@
+Error handling:If the file is not found, ask user for the file name. Repeat until the file exists.
+ I defined a boolean "loop" as true. And then I used a while loop to repeat. If the file is exist, 
+"loop" will become false and it won't get in to the while loop again. If not, ask the user for the
+file name and get into the while loop again.
+
+Error handling: If there are any number less than 0 or greater than 5 in the file, ignore the number. 
+ I use a "number" to mark down the number of the numbers in the file. If the number in the file is in 
+the range of 0 to 5, "number" will add 1. If not , it won't change.
+
+Error handling: If there are any input in the file that is not a number, then stop reading numbers from the file. 
+ When reading the file, I use a while loop to read it. And the condition of the while loop is 
+"scan.hasNextDouble()". So if the next input is not a number, it won't read anymore.

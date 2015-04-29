@@ -1,0 +1,6 @@
+   I think abstract class is better. In abstract class, it can make methods,which are needed to be defined, become
+ abstract. And I don't need to make other methods abstract so I don't need to defined those methods in the children
+ classed again. But the con of it is that it can only extend from one file.
+   For the interface, it's pros are that it lists the methods out so user can see it clearly. Also classes can
+ get methods from different classes, which implements the interface. It's cons are that all methods need to be
+ defined again in every class.   

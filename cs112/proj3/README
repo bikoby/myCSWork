@@ -1,0 +1,5 @@
+  At first, I'll check the args. If it exists, then keep on. If not, ask the user for a file name. Then I'll 
+ask the user to type in what way he will like to search. I use the "try/catch" to contral the user to only type 
+in number. And then jump into the search methods. I compare each key word and the movies title or director. If 
+they all match, then print them out.
+   I didn't use the code in the proj 1 and proj 2. I change a lot.

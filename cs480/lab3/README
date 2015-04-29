@@ -1,0 +1,13 @@
+READ ME
+
+Author: Jinpeng Bi (Koby)
+
+The dictionary is created ahead by myself, which is in the file "dictionary".
+If you want to generate the dictionary again, just run "dictionaryCreate", and
+type "pwd", which contains top 10,000 password in it. 
+
+For test, run "lab3". If you want to check all the files at the same time. Just
+type in all the file names in the commend line. If you want to check one file 
+at a time, run "lab3" without filling in the commend line. The program will
+ask you to input the file name. If you finish, just type in "n".
+(PS: make sure the files are in the same directory of lab3.)

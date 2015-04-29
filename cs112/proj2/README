@@ -1,0 +1,4 @@
+  I define the title, year, genre, director, release_day in Movie.java and each of them has a getter method. In 
+Driver.java, I changed a lot from project 1. I didn't use contains in project 1. And I use contains in project 2. 
+I use "mn" to get the movie number. And then creat a new movie object in movie array. Then compare with the 
+keyword, if it mathches, then print out. 

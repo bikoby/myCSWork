@@ -1,0 +1,4 @@
+  I defined totalAnimals, totalMammals, totalReptiles as protected and static so I need to define every class 
+with "extends". So other classes which are not their children classes cannot change them and in all subclass 
+they can be used. ScientificName is defined as final and static because it won't and can't change, and in every 
+subclass they can be used. 

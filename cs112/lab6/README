@@ -1,0 +1,10 @@
+  I think in this lab, iteration is better design.
+  For iteration, it just need to create one HashMap, and put every word
+and number in the HashMap after counting and comparing. And it is more 
+efficient and need less codes. But it may be harder to explain.
+  For recursion, it is easier to explain. But it need more codes and
+is less efficient. Also I have to creat a method using index to make 
+recursion.
+  About comparing, I implement the Comparable interface in Word, and
+add compareTo in it. I compare the numbers of words first and if the
+numbers are the same, I wiil turn to compare the word.

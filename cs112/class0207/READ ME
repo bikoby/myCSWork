@@ -1,0 +1,12 @@
+   At first, I use b1 to check whether the first letter of username is a letter. if it is a letter,b1 become 1 and get out of the loop. 
+If not, it will continue until b1=1. I create username to store the right username in the while loop. And then, I create check_number 
+to check whether there is a number in the password; check_uletter to check whether there is an upper number in the password; compare to 
+check whether the password contain the username; check_l to check the password's length. If they are true, they will become 1. And only if 
+all of them are true, the loop will end. And I use password1 to store the password in the while loop.
+
+How do you know that your program is correct? 
+I have tried different username and password.
+
+How does your program help user choose a valid password? For example, when user enters an invalid password, does your program tell the user 
+why it was invalid? 
+Yes. It will tell the user why his/her password is invalid.

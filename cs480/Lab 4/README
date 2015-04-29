@@ -1,0 +1,124 @@
+README
+Author: Jinpeng Bi (Koby)
+
+Structure:
+	pwdManager: Contains an arraylist of passwords, the "password" to do 1),2),
+				3), the hashmap<hash of the website, PwdPair>
+				
+				Can be initialized using a password file
+			
+			Functions: Password generation, Password storage, Password retrieval 
+		 		       and ask user for a password to do 1), 2), or 3).
+	PwdPair: Contains the hash of the website, the key which is the random
+			 number, the password after being encrypted.
+	 
+
+Password generation:
+	Passwords in the top list and passwords with one single common word are 
+	easy to be cracked. So my password generator will generate password that
+	combines two random password in the "pwd" file and a random number. The
+	"pwd" file contains passwords in the top list and their similar passwords
+	(Those are the password from the library in lab3). I choose these passwords 
+	because these passwords are on the top list, which means that they are easy 
+	to be remembered. But it is hard to be cracked because there are so many 
+	combinations with two different words.
+	
+Password storage:
+	I encrypt the password with the website that has been replace all the 
+	non-word character and a random number which is from 0 to 100.
+	The decryption needs the website and the number as a key.
+	
+	1. Hash the website with MD5; 
+	   (The hash will store in the file)
+	2. Replace all non-word character in website with "";
+	2. Generate a random number n;
+	3. Multiply n by the length of the website
+	4. Hash the product;
+	   (The hash will store in the file)
+	5. Encrypt:
+	   The encryption will generate letters from 33 to 126 in ASCII. 
+		Example:
+			password: abc
+			number:  3
+			website: def
+			product: 9
+			index of result : 0    1    2   3
+			password        :      a    b   c
+							 num   +    +   +
+			pre     		:	  num   a   b
+								   +    +   +
+			website			:	   d    e   f
+		 Note:  			
+			For calculation, I use the ASKII of each letter. In order to 
+			control the ASKII of each letter in result is between 33-126, 
+			after the calculation above, I subtract 2 * ASKII of 'a' and 
+			num is the result of num % 26. 
+			What encryption algorithm are you using and why? 
+			What key should be used for encryption, 
+			and how does your program store the key?
+		Reason: 
+			Because the password needs to be retrieved, so we should not use 
+			MD5 to hash the password. Then I use the website and a random number
+			as keys to encrypt the password. So only when the website and that
+			number is known, the password can be retrieved. I add a random 
+			number such that it is hard to know the pattern by observing the 
+			file. I hash the website and the number with MD5 hash. As the 
+			website will provide when the password needs to be retrieved. And
+			the random number can be guessd easily.
+	6. Store the result into the file.
+	7. Store all information in a HashMap.
+	 
+Password retrieval:
+	1. Check whether the website is store in the HashMap.
+	2. Get the PwdPari from the HashMap;
+	3. Replace all non-word character in website with "";
+	4. "Guess" the random number;
+	5. Retrieval:
+		 Example:
+			password after being encrypted: abc
+			number:  3
+			website: def
+			product: 9
+			index of password : 0    1    2   3
+			password          :      a    b   c
+							   num   -    -   -
+			pre     		  :	    num   a   b
+							         -    -   -
+			website		  	  :	     d    e   f
+		 Note: This is only the idea of decryption. More details are in the 
+		 	   codes.  			 
+
+Extra credit:
+	Ask user for a password to do 1), 2), or 3).
+	(Assume that the user knows how to use the "password" in the file)
+	I store the "password" in the first line of the file. The way to get the 
+	true password is to add 1, 2, 3 on the password (on ASCII) and subtract the
+	number after it.
+	Example: abc4 ==> 1st option ^_`
+					  2nd option _`a
+					  3rd option 1ab
+	User can change the "password" in file. It is safe if no one else knows the
+	way to get the true password.
+	After the user gets the password right, he or she does not need to type in
+	another time when trying to access to the same function.
+	
+Usage:
+
+Please choose to begin:
+1. Begin with empty file
+2. Begin with exist pwd file
+(Note: If open the pwd fail, the system will keep going with the 1sr option.)
+
+Please choose to continue:
+1. Generate safe password
+2. Store website and password
+3. Retrive a password from website
+4. Exit
+(Note: 1. After getting a random number, users can choose to use it to store 
+		with a website.
+	   2. The default "password" is "password".
+	   	  password for each option : 1. qbttxpse
+	   	  							 2. rcuuyqtf
+	   	  							 3. sdvvzrug
+	   
+)

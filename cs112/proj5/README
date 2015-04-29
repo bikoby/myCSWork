@@ -1,0 +1,6 @@
+   All changes are made in Driver from line 181 to 279.
+   I use the information in the userdata to create a ratings list [][] to save all the ratings of all users of 
+movies. And then to calculate the similarity of each user using the Lab 7's code. And then to find out the most similar user with the 
+user u. Then get the array list of the movies that the user has seen and have a grade larger than 3.0. And then
+user the listMenu to print out the recommanded movies.
+	When the ratings are changed, the ratings list will change and then the recommanded moveis will change too.

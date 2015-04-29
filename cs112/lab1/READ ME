@@ -1,0 +1,10 @@
+how my project works:
+I print a "0" first. I will explain it later. And at the first loop, I begin from i=1. Every time i will plus 1.
+If i%10 is 0, the second for loop will change into another line. If I begin from "0", the first line will be empty.
+So I begin from 1 in the first loop. 
+
+
+
+
+1. Yes. 2 loops.
+2.no

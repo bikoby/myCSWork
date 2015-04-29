@@ -1,0 +1,14 @@
+  First, I create an array "ratings" to store all the ratings. And then I create an array "compareRating" and
+compare all the ratings between each user and put all the result in compareRating. And then I compare all the
+ratings in compareRating and create a linked list to store the similar user and print them out.
+  I have created a new rating file for the extra credit part. I create a watchMovie array to store the movie 
+number that users have both watched. The compare rating between 3 users are the same.I change the step when I 
+compare all rating between all users. I add a statement that if the compare rating of these users are the same 
+, then I compare the watchMovie of them. I will put the most watchMovie user in the linked list. And then print 
+them out.
+
+  for project 5:
+  I will use the result of Lab7 to get the similar users. I will add findSimilarUser(user0) method in a new 
+database which include all user and all users' ratings of movies. And after I get the similar user1, I will 
+recommend the movies,that user1 has watched but user0 has not watched and user1 rate the movies for larger 
+than 3.0, to the user0.

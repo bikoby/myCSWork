@@ -1,0 +1,6 @@
+	  I use movieDatabase to save the movie information of the "movies",
+and when the driver is run, I use create the movieDB to save them.
+I have saved the title,year, director in it.And then I use the userDB
+to save the movies that user has seen. I have save the user's firstname
+,lastname, username, password and the movies that the user has seen in
+it. 

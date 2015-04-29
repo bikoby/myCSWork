@@ -1,0 +1,11 @@
+How do you know that your program is correct? 
+I ran and tried it. It can work. try:4    result: 4 is not a prime
+									 5            5 is not a prime
+									 -1			  -1 is not a prime
+
+
+How many repetitions does your for loop go through? For example, for (int i=0; i<3; i++) does 3 repetitions. 
+it does 'number' repetitions
+
+How does your program handle input errors? For example, what happens if the user input is a negative number? 
+It prints out the negative number is not a prime.

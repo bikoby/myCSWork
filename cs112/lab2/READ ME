@@ -1,0 +1,9 @@
+    Set up a scaner to read the file whose name is the user name. Using "j" to record how many time 
+that the user has been wrong. Using the for loop to give the user 3 times to try. And print out how many time do 
+the user still have to try. If the name and password is right, it will print out "welcom"+user name and break. 
+If not, the user can try again if the "j" did not equal to 2. When the user was wrong for 3 
+times, the programe will terminate.
+	In this lab2, the user names : passwords are, koby : 1a@ b ,ej : ej ,cs112 : cs112 
+
+Can you check if the password matches guidelines, such as containing numbers and special characters?
+yes.

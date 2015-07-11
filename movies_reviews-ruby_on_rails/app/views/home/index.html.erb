@@ -1,0 +1,39 @@
+<h1>Movie Reviews System</h1>
+
+<!-- Movies Section -->
+<h1><%= link_to "Movies", movies_path %></h1>
+	<% @movies.each do |movie| %>
+		<h3> <%= link_to movie.title,movie %> </h3>
+		<p>Genre: <%= movie.genre %> |
+		Release Date: <%= movie.release_date.strftime("%b %d. %Y") %>
+		</p>
+	<hr>
+	<% end %>
+
+<!-- Reviews Section -->
+<h1><%= link_to "Reviews", reviews_path %></h1>
+	<% if @reviews.size == 0 %>
+		<p>No reviews yet</p>
+	<% else %>
+	<% @reviews.each do |review| %>
+		<p><small><%= review.email %>: </small></p>
+
+		<p> &nbsp; Movie:
+		<% m = @movies.find(review.m_id) %>
+		<%= link_to m.title,m%></p>
+
+		<p> &nbsp; Reviews:
+		<% if review.comments != "" %>
+			<%= review.comments %>
+		<% else %>
+			No comments :(
+		<% end %>
+		</p>
+		<p>&nbsp; Rating: <%= review.rating %>/5 |
+		<%= review.updated_at.strftime("%b %d. %Y") %>
+		</p>
+		<hr>
+	<% end %>
+
+<%= link_to 'See All Reviews', reviews_path %>
+<%end%>

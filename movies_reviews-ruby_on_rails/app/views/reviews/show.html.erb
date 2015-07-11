@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reviews:</strong>
+	<%= @review.comments %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @review.email %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @review.rating %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @movies.find(@review.m_id).title %></td>
+</p>
+<%= link_to 'Home', root_path %> ||
+<%= link_to 'Back', reviews_path %>

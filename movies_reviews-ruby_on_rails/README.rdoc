@@ -1,0 +1,16 @@
+== README
+
+* Ruby version
+ruby 2.2.1
+rails 4.2.3
+
+* Data Base
+gem 'pg'
+(postgresql)
+
+* Deploy on Heroku
+Link: http://koby-movies.herokuapp.com/
+
+Movies need to be added manually from rails c
+
+//TODO make AJAX working to get movies from a movie database API

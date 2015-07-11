@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reviews</h1>
+<% if @reviews.size == 0%>
+	<p>No reviews yet!</p>
+<% else %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comments</th>
+      <th>Email</th>
+      <th>Rating</th>
+      <th>Movieid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.comments %></td>
+        <td><%= review.email %></td>
+        <td><%= review.rating %></td>
+        <td><%= @movies.find(review.m_id).title %></td>
+        <td><%= link_to 'Show', review %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%end%>
+<%= link_to 'Home', root_path %>

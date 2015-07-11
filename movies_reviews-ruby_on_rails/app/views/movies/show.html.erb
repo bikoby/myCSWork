@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @movie.release_date %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @movie.genre %>
+</p>
+<div>
+<h2>Reviews :</h2>
+	<% if @reviews.size == 0%>
+		<p>No reviews for this movie yet</p>
+	<% else %>
+		<% @reviews.each do |review| %>
+			<p><small><%= review.email %>: </small></p>
+			<p> &nbsp;&nbsp;&nbsp; Movie:
+				<%= @movie.title %></p>
+			<p> &nbsp;&nbsp;&nbsp; Reviews:
+			<% if review.comments != "" %>
+				<%= review.comments %>
+			<% else %>
+				No comments :(
+			<% end %>
+			</p>
+			<p>&nbsp;&nbsp;&nbsp; Rating: <%= review.rating %>/5 @
+				<%= review.updated_at.strftime("%b %d. %Y") %>
+			</p>
+			<hr>
+		<% end %>
+	<% end %>
+</div>
+<%= link_to 'Home', root_path %> ||
+<%= link_to 'Add new review',new_review_path(movie: @movie.id) %> ||
+<%= link_to 'Back', movies_path %>
